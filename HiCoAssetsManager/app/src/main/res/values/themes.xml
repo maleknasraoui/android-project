@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.HiCoAssetsManager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/hico_yellow</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/hico_yellow</item>
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/hico_honey</item>
+        <item name="colorOnPrimary">@color/hico_black</item>
+        <item name="android:fontFamily">sans</item>
         <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/hico_black</item>
     </style>
 </resources>

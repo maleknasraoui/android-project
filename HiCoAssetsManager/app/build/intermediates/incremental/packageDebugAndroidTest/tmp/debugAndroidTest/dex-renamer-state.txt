@@ -1,0 +1,4 @@
+#Sat May 30 08:18:08 CET 2026
+base.0=C\:\\Users\\malek\\Documents\\Codex\\2026-05-30\\files-mentioned-by-the-user-pasted\\outputs\\HiCoAssetsManager\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

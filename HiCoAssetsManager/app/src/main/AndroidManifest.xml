@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <permission
+        android:name="com.hico.assetsmanager.READ_BIENS"
+        android:protectionLevel="normal" />
 
     <application
-        android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_hico_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:theme="@style/AppTheme"
-        tools:targetApi="31">
+        android:roundIcon="@drawable/ic_hico_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HiCoAssetsManager">
 
-        <activity android:name=".MainActivity" android:exported="true">
+        <activity android:name=".AddEditBienActivity" />
+        <activity android:name=".UserRequestsActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddEditActivity" android:exported="false"/>
-
         <provider
-            android:name=".Receivers$BienProvider"
+            android:name=".provider.BienContentProvider"
             android:authorities="com.hico.assetsprovider"
             android:exported="true"
-            tools:ignore="ExportedContentProvider"/>
+            android:readPermission="com.hico.assetsmanager.READ_BIENS" />
 
-        <receiver android:name=".Receivers$BootReceiver"
-            android:exported="true" android:enabled="true">
-            <intent-filter android:priority="1000">
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name=".Receivers$TimeReceiver"
-            android:exported="true" android:enabled="true">
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.TIME_SET"/>
-                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".Receivers$RequestReceiver"
-            android:exported="true" android:enabled="true">
+        <receiver
+            android:name=".receiver.TimeChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="com.hico.assetsmanager.REQUEST_BIEN"/>
+                <action android:name="android.intent.action.TIME_SET" />
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".receiver.BienRequestReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hico.assetsmanager.REQUEST_BIEN" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

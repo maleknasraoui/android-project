@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFC107</color>
-    <color name="colorPrimaryDark">#FF8F00</color>
-    <color name="colorAccent">#FFC107</color>
-    <color name="hico_yellow">#FFC107</color>
-    <color name="hico_black">#1A1A1A</color>
-    <color name="hico_grey">#757575</color>
-    <color name="hico_red">#F44336</color>
-    <color name="white">#FFFFFF</color>
-    <color name="background_grey">#F5F5F5</color>
+    <color name="hico_yellow">#FBC02D</color>
+    <color name="hico_honey">#FFB300</color>
+    <color name="hico_black">#161616</color>
+    <color name="hico_white">#FFFFFF</color>
+    <color name="hico_gray">#F5F5F5</color>
 </resources>

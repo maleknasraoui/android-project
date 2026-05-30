@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/hico_gray">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/formToolbar" android:layout_width="match_parent"
+            android:layout_height="64dp" android:background="@color/hico_yellow"
+            app:title="Bien" app:titleTextColor="@color/hico_black"
+            app:navigationIcon="@android:drawable/ic_media_previous" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="18dp">
+
+            <EditText android:id="@+id/nomEditText" android:layout_width="match_parent"
+                android:layout_height="52dp" android:hint="Nom"
+                android:textColor="@color/hico_black" android:textColorHint="#777777"
+                android:background="@drawable/bg_field" />
+
+            <Spinner android:id="@+id/typeSpinner" android:layout_width="match_parent"
+                android:layout_height="52dp" android:layout_marginTop="12dp" />
+
+            <EditText android:id="@+id/valeurEditText" android:layout_width="match_parent"
+                android:layout_height="52dp" android:hint="Valeur" android:inputType="numberDecimal"
+                android:textColor="@color/hico_black" android:textColorHint="#777777"
+                android:background="@drawable/bg_field" android:layout_marginTop="12dp" />
+
+            <EditText android:id="@+id/descriptionEditText" android:layout_width="match_parent"
+                android:layout_height="120dp" android:hint="Description" android:gravity="top"
+                android:textColor="@color/hico_black" android:textColorHint="#777777"
+                android:background="@drawable/bg_field" android:layout_marginTop="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveButton" android:layout_width="match_parent"
+                android:layout_height="54dp" android:text="Enregistrer"
+                android:textColor="@color/hico_black" android:textStyle="bold"
+                android:layout_marginTop="18dp" app:backgroundTint="@color/hico_yellow"
+                app:cornerRadius="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:background="@drawable/bg_login" android:padding="24dp">
+
+    <ImageView android:layout_width="92dp" android:layout_height="92dp"
+        android:src="@drawable/ic_hico_logo" android:contentDescription="@string/app_name" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="HiCo Assets Manager" android:textSize="25sp"
+        android:textStyle="bold" android:textColor="@color/hico_black"
+        android:layout_marginTop="14dp" />
+
+    <EditText android:id="@+id/usernameEditText"
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:hint="Nom d'utilisateur" android:singleLine="true"
+        android:textColor="@color/hico_black" android:textColorHint="#777777"
+        android:background="@drawable/bg_field" android:layout_marginTop="30dp" />
+
+    <EditText android:id="@+id/passwordEditText"
+        android:layout_width="match_parent" android:layout_height="52dp"
+        android:hint="Mot de passe" android:singleLine="true"
+        android:inputType="textPassword" android:background="@drawable/bg_field"
+        android:textColor="@color/hico_black" android:textColorHint="#777777"
+        android:layout_marginTop="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton" android:layout_width="match_parent"
+        android:layout_height="54dp" android:text="Connexion"
+        android:textColor="@color/hico_black" android:textStyle="bold"
+        android:layout_marginTop="20dp" app:backgroundTint="@color/hico_yellow"
+        app:cornerRadius="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/requestAccountButton" android:layout_width="match_parent"
+        android:layout_height="54dp" android:text="Demander un compte"
+        android:textColor="@color/hico_black" android:textStyle="bold"
+        android:layout_marginTop="10dp" app:backgroundTint="@color/hico_white"
+        app:strokeColor="@color/hico_yellow" app:strokeWidth="1dp"
+        app:cornerRadius="8dp" />
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Admin: admin / admin123\nUtilisateur: user / user123"
+        android:textAlignment="center" android:textColor="@color/hico_black"
+        android:layout_marginTop="18dp" />
+</LinearLayout>
