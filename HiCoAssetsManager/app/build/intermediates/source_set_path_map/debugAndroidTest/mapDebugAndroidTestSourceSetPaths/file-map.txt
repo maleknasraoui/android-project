@@ -1,4 +1,0 @@
-com.hico.assetsmanager.test.app-androidTest-0 C:\Users\malek\Documents\Codex\2026-05-30\files-mentioned-by-the-user-pasted\outputs\HiCoAssetsManager\app\build\generated\res\resValues\androidTest\debug
-com.hico.assetsmanager.test.app-mergeDebugAndroidTestResources-1 C:\Users\malek\Documents\Codex\2026-05-30\files-mentioned-by-the-user-pasted\outputs\HiCoAssetsManager\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.hico.assetsmanager.test.app-mergeDebugAndroidTestResources-2 C:\Users\malek\Documents\Codex\2026-05-30\files-mentioned-by-the-user-pasted\outputs\HiCoAssetsManager\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.hico.assetsmanager.test.app-debugAndroidTest-3 C:\Users\malek\Documents\Codex\2026-05-30\files-mentioned-by-the-user-pasted\outputs\HiCoAssetsManager\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

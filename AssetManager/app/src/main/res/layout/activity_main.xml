@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F7">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_bg"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="30dp"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/txtRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADMINISTRATEUR"
+                    android:textColor="#BCBCBC"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accueil"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnLogoutCard"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="#33FFFFFF"
+                app:cardElevation="0dp">
+                <ImageButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_lock_power_off"
+                    app:tint="#FFFFFF"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Quitter" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="15dp"
+                android:hint="Rechercher un bien..."
+                android:background="@drawable/edit_text_bg"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="12dp"
+                android:paddingStart="18dp"
+                android:elevation="2dp"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:id="@+id/adminScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingHorizontal="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nouvel Actif"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="16dp"
+                            android:textColor="#1A237E"
+                            android:textSize="16sp" />
+
+                        <EditText android:id="@+id/editNom" android:layout_width="match_parent" android:layout_height="52dp" android:hint="Désignation" android:background="@drawable/edit_text_bg" android:layout_marginBottom="10dp" />
+                        <EditText android:id="@+id/editType" android:layout_width="match_parent" android:layout_height="52dp" android:hint="Catégorie" android:background="@drawable/edit_text_bg" android:layout_marginBottom="10dp" />
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                            <EditText android:id="@+id/editValeur" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:hint="Prix (TND)" android:inputType="numberDecimal" android:background="@drawable/edit_text_bg" android:layout_marginEnd="8dp" />
+                            <EditText android:id="@+id/editDesc" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:hint="Note" android:background="@drawable/edit_text_bg" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnAdd"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:text="ENREGISTRER"
+                            android:backgroundTint="#2E7D32"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            app:cornerRadius="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+                            <Button android:id="@+id/btnUpdate" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="Modifier" android:layout_marginEnd="8dp" android:backgroundTint="#3F51B5" app:cornerRadius="14dp" />
+                            <Button android:id="@+id/btnDelete" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="Supprimer" android:backgroundTint="#D32F2F" app:cornerRadius="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVENTAIRE COMPLET"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#8E8E93"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:letterSpacing="0.1" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
